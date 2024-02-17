@@ -1,0 +1,10 @@
+{
+  "caller": "PCBS2-Cheats",
+  "offsetRequests": [
+    {
+      "searchName": "CareerStatus_State_OnDeserialization",
+      "value": "0xCB77C0",
+      "signature": "void CareerStatus_State__OnDeserialization (CareerStatus_State_o* __this, Il2CppObject* sender, const MethodInfo* method);"
+    }
+  ]
+}
