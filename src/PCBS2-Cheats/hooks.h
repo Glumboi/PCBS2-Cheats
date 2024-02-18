@@ -56,9 +56,9 @@ void KeyboardLoop()
 
     while (true)
     {
-        Sleep(110);
+        Sleep(60);
 
-        if (GetKeyState(VK_LCONTROL) PRESSED && GetKeyState(VK_SHIFT) PRESSED && GetKeyState(VK_OEM_PLUS)
+        if (GetAsyncKeyState(VK_LCONTROL) PRESSED && GetAsyncKeyState(VK_SHIFT) PRESSED && GetAsyncKeyState(VK_OEM_PLUS)
             PRESSED)
         {
             float add = stats.GetStarRating() + 1 > 5 ? 5 : stats.GetStarRating() + 1;
@@ -66,7 +66,7 @@ void KeyboardLoop()
             continue;
         }
 
-        if (GetKeyState(VK_LCONTROL) PRESSED && GetKeyState(VK_SHIFT) PRESSED && GetKeyState(
+        if (GetAsyncKeyState(VK_LCONTROL) PRESSED && GetAsyncKeyState(VK_SHIFT) PRESSED && GetAsyncKeyState(
                 VK_OEM_MINUS)
             PRESSED)
         {
@@ -75,25 +75,25 @@ void KeyboardLoop()
             continue;
         }
 
-        if (GetKeyState(VK_SHIFT) && GetKeyState(VK_OEM_PLUS) PRESSED)
+        if (GetAsyncKeyState(VK_SHIFT) && GetAsyncKeyState(VK_OEM_PLUS) PRESSED)
         {
             stats.SetCash(stats.GetCash() + 1000);
             continue;
         }
 
-        if (GetKeyState(VK_SHIFT)  && GetKeyState(VK_OEM_MINUS) PRESSED)
+        if (GetAsyncKeyState(VK_SHIFT)  && GetAsyncKeyState(VK_OEM_MINUS) PRESSED)
         {
             stats.SetCash(stats.GetCash() - 1000);
             continue;
         }
 
-        if (GetKeyState(VK_LCONTROL) PRESSED && GetKeyState(VK_OEM_PLUS) PRESSED)
+        if (GetAsyncKeyState(VK_LCONTROL) PRESSED && GetAsyncKeyState(VK_OEM_PLUS) PRESSED)
         {
             stats.SetKudos(stats.GetKudos() + 1000);
             continue;
         }
 
-        if (GetKeyState(VK_LCONTROL) PRESSED && GetKeyState(VK_OEM_MINUS) PRESSED)
+        if (GetAsyncKeyState(VK_LCONTROL) PRESSED && GetAsyncKeyState(VK_OEM_MINUS) PRESSED)
         {
             const float sub = stats.GetKudos() - 1000 == 0 ? 0 : stats.GetKudos() - 1000;
             stats.SetKudos(sub);
