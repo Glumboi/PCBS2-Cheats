@@ -124,7 +124,7 @@ void __stdcall CareerStatus_State_OnDeserialization_hook(DWORD* __this, DWORD* s
                "- ctrl + shift + '+' to add 1 star\n"
                "- ctrl + shift + '+' to subtract 1 star\n", "Info", MB_OK);
 
-    //CreateThread(0, 0, (LPTHREAD_START_ROUTINE)KeyboardLoop, 0, 0, 0);
+    CreateThread(0, 0, (LPTHREAD_START_ROUTINE)KeyboardLoop, 0, 0, 0);
     return;
 }
 
